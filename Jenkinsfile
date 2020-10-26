@@ -11,7 +11,8 @@ pipeline {
                 jdk "jdk-1.8.101"
             }
             steps {
-                sh './mvnw compile'
+                sh 'mvn --version'
+                sh 'mvn compile'
             }
         }
         stage('SonarCloud analysis') {
@@ -23,6 +24,7 @@ pipeline {
             }
             steps {
                 withSonarQubeEnv(installationName: 'SonarCloud', credentialsId: 'customCredentialsId') {
+                    sh 'mvn --version'
                     sh "./mvnw sonar:sonar"
                 }
             }
