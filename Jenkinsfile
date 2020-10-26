@@ -25,7 +25,7 @@ pipeline {
             steps {
                 withSonarQubeEnv(installationName: 'SonarCloud', credentialsId: 'customCredentialsId') {
                     sh 'mvn --version'
-                    sh "./mvnw sonar:sonar"
+                    sh "mvn sonar:sonar"
                 }
             }
         }
