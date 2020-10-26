@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('SCM') {
             steps {
-                git 'https://github.com/tom-vanbraband-sonarsource/js-dummy-project.git'
+                git 'https://github.com/tom-vanbraband-sonarsource/java-project-circle-ci.git'
             }
         }
         stage('Build') {
