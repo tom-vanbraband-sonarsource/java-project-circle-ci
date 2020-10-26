@@ -23,8 +23,8 @@ pipeline {
             }
             steps {
                 withSonarQubeEnv(installationName: 'SonarCloud', credentialsId: 'customCredentialsId') {
-                    sh "${scannerHome}/bin/sonar-scanner -X"
-                } // submitted SonarQube taskId is automatically attached to the pipeline context
+                    sh "mvn sonar:sonar"
+                }
             }
         }
     }
