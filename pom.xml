@@ -19,6 +19,7 @@
                 <sonar.projectKey>tom-vanbraband-sonarsource_java-project-circle-ci</sonar.projectKey>
                 <sonar.organization>tom-vanbraband-sonarsource</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.qualitygate.wait>true</sonar.qualitygate.wait>
 	</properties>
 
 	<dependencies>
